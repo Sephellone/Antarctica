@@ -104,17 +104,20 @@
   padding: 0;
   list-style-type: none;
   transition: $trans-default;
-  transition-property: transform opacity;
+  transition-property: transform;
 
   @include vp-767 {
-    opacity: 0;
+    display: block;
+    visibility: hidden;
     transform: translateX(200px);
+    pointer-events: none;
 
     .is-open & {
       display: block;
+      visibility: visible;
       padding-left: 10px;
       padding-top: 22px;
-      opacity: 1;
+      pointer-events: all;
       transform: translateX(0);
     }
   }

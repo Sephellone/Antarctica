@@ -1446,11 +1446,11 @@ button,
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
-  -webkit-transition-property: -webkit-transform opacity;
-  transition-property: -webkit-transform opacity;
-  -o-transition-property: transform opacity;
-  transition-property: transform opacity;
-  transition-property: transform opacity, -webkit-transform opacity;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
 }
 
 .header__nav-item {
@@ -1674,17 +1674,20 @@ button,
   }
 
   .header__nav-list {
-    opacity: 0;
+    display: block;
+    visibility: hidden;
     -webkit-transform: translateX(200px);
     -ms-transform: translateX(200px);
     transform: translateX(200px);
+    pointer-events: none;
   }
 
   .is-open .header__nav-list {
     display: block;
+    visibility: visible;
     padding-left: 10px;
     padding-top: 22px;
-    opacity: 1;
+    pointer-events: all;
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
