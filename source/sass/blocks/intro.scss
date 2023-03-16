@@ -1,0 +1,103 @@
+.intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+  row-gap: 50px;
+  width: 100%;
+  min-height: 650px;
+  background-color: $color-sapphire;
+  color: $color-alice-blue;
+  overflow: hidden;
+  filter: drop-shadow($shadow-filter-black);
+
+  @include vp-1023 {
+    min-height: 638px;
+    filter: none;
+  }
+
+  @include vp-767 {
+    min-height: 500px;
+    row-gap: 14.5px;
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include vp-767{
+      height: 113%;
+      object-position: 44% 80%;
+    }
+  }
+}
+
+.intro__image-wrapper {
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  width: 100%;
+  height: 100%;
+}
+
+.intro__header {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.intro__container {
+  z-index: 2;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  padding: 0 135px;
+  padding-top: 20px;
+  filter: drop-shadow($shadow-filter-black);
+
+  @include vp-1023 {
+    padding-top: 22px;
+    filter: none;
+  }
+
+  @include vp-767 {
+    padding-top: 0;
+  }
+
+  h1 {
+    margin: 0;
+    margin-bottom: 12px;
+    padding: 0;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 66px;
+
+    @include vp-1023 {
+      font-size: 50px;
+      line-height: 61px;
+    }
+
+    @include vp-767 {
+      font-size: 36px;
+      line-height: 45px;
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    @include vp-1023 {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include vp-767 {
+      max-width: 200px;
+      font-size: 16px;
+    }
+  }
+}
