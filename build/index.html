@@ -22,6 +22,7 @@
   </head>
   <body>
     <div class="wrapper">
+      <!-- Интро и шапка -->
       <div class="intro">
         <div class="intro__image-wrapper">
           <picture>
@@ -33,12 +34,14 @@
           </picture>
         </div>
 
+        <!-- Шапка -->
         <header class="intro__header header" data-header>
           <nav class="container header__nav">
             <a class="header__logo" href="index.html">
               <img src="img/svg/logo.svg" width="70" height="38" alt="Логотип Круизов в Антарктику.">
             </a>
-            <ul class="header__nav-list main-nav">
+            <!-- Навигация, скрывающаяся в мобилке -->
+            <ul class="header__nav-list">
               <li class="header__nav-item">
                 <a href="#">Преимущества</a>
               </li>
@@ -52,27 +55,51 @@
                 <a href="#">Контакты</a>
               </li>
             </ul>
+
+            <!-- Кнопка открытия меню на мобилке -->
             <button class="header__menu" data-burger>
               <span class="visually-hidden">Открыть меню</span>
             </button>
           </nav>
         </header>
 
+        <!-- Текстовый контент главного экрана -->
         <div class="container intro__container">
           <h1>Круизы в&nbsp;Антарктику</h1>
           <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
         </div>
       </div>
       <main>
-        <section>
+        <!-- Секция с пингвинами -->
+        <section class="travel">
+          <div class="container travel__container">
+            <div class="travel__description">
+              <h2>Путешествие на&nbsp;край Земли</h2>
+              <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+            </div>
+            <div class="travel__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/penguins/penguins-mobile.webp 1x, img/penguins/penguins-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/penguins/penguins-tablet.webp 1x, img/penguins/penguins-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/penguins/penguins-desktop.webp 1x, img/penguins/penguins-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/penguins/penguins-mobile.jpg 1x, img/penguins/penguins-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="img/penguins/penguins-tablet.jpg 1x, img/penguins/penguins-tablet@2x.jpg 2x">
+                <img src="img/penguins/penguins-desktop.jpg" width="560" height="301" alt="Три пингвина на снежном склоне. Два смотрят в камеру, а третий стоит боком."
+                srcset="img/penguins/penguins-desktop@2x.jpg 2x">
+              </picture>
+            </div>
+          </div>
 
 
         </section>
       </main>
+
+      <!-- Подвал -->
       <footer class="footer">
         <div class="container footer__container">
+          <!-- Навигация по сайту -->
           <nav class="footer__nav">
-            <a class="header__logo" href="index.html">
+            <a class="footer__logo" href="index.html">
               <img src="img/svg/logo.svg" width="70" height="38" alt="Логотип Круизов в Антарктику.">
             </a>
             <h2 class="visually-hidden">Навигация по сайту</h2>
@@ -92,6 +119,7 @@
             </ul>
           </nav>
 
+          <!-- Соцсети -->
           <h2 class="visually-hidden">Мы в соцсетях</h2>
           <ul class="footer__social social">
             <li class="social__item">

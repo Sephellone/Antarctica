@@ -1,0 +1,92 @@
+.travel {
+  padding-top: 120px;
+  padding-bottom: 145px;
+
+  @include vp-1023 {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 55px;
+    padding-bottom: 85px;
+  }
+}
+
+.travel__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+
+  @include vp-1023 {
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.travel__description {
+  max-width: 515px;
+  padding-top: 45px;
+
+  @include vp-1023 {
+    max-width: 100%;
+    padding-top: 0;
+  }
+
+  h2 {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding: 0;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+
+    @include vp-1023 {
+      max-width: 210px;
+      margin-top: 0;
+      margin-bottom: 18px;
+      font-size: 26px;
+      line-height: 36px;
+    }
+
+    @include vp-767 {
+      font-size: 24px;
+      line-height: 34px;
+      margin-bottom: 17px;
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+
+    @include vp-1023 {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+}
+
+.travel__image-wrapper {
+  width: 100%;
+
+  @include vp-1023 {
+    padding-top: 10px;
+  }
+
+  @include vp-767 {
+    padding-top: 0;
+  }
+
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
