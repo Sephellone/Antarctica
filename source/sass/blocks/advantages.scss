@@ -1,0 +1,120 @@
+.advantages {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  min-height: 562px;
+  padding-top: 120px;
+  padding-bottom: 90px;
+  background-color: $color-pattens-blue;
+
+  @include vp-1023 {
+    min-height: 588px;
+    padding-top: 90px;
+  }
+
+  @include vp-767 {
+    min-height: none;
+    padding-top: 58px;
+    padding-bottom: 65px;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  h2 {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    margin-bottom: 56px;
+    font-weight: 600;
+    font-size: 28px;
+    text-align: center;
+
+    @include vp-1023 {
+      margin-bottom: 49px;
+      font-size: 26px;
+      line-height: 39px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 29px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
+  ul {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include vp-1023 {
+      gap: 30px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  li {
+    box-sizing: border-box;
+    min-height: 241px;
+    padding: 30px;
+    background-color: $color-alice-blue;
+
+    @include vp-1023 {
+      padding: 20px;
+      padding-top: 26px;
+      padding-right: 16px;
+    }
+
+    @include vp-767 {
+      min-height: auto;
+      padding: 20px;
+      padding-top: 25px;
+    }
+  }
+
+  svg {
+    margin: 0;
+    margin-bottom: 13px;
+
+    @include vp-1023 {
+      height: 26px;
+      transform: translateX(-3px);
+    }
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 8px;
+    padding: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+
+    @include vp-767 {
+      max-width: 70%;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
