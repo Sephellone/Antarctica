@@ -17,7 +17,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  align-items: stretch;
 
   @include vp-1023 {
     gap: 30px;
@@ -32,6 +31,7 @@
 .travel__description {
   max-width: 515px;
   padding-top: 45px;
+  align-self: stretch;
 
   @include vp-1023 {
     max-width: 100%;
@@ -76,6 +76,7 @@
 
 .travel__image-wrapper {
   width: 100%;
+  align-self: stretch;
 
   @include vp-1023 {
     padding-top: 10px;
@@ -89,6 +90,5 @@
     width: 100%;
     object-fit: contain;
     background-color: $color-pattens-blue;
-
   }
 }
