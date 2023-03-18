@@ -1808,27 +1808,37 @@ button,
   grid-template-columns: 1fr;
 }
 
-.catalog li.focus-visible:focus {
+.catalog li:hover,
+.catalog li:focus,
+.catalog li:focus-within {
   -webkit-box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
 }
 
-.catalog li.focus-visible:focus .catalog__description {
+.catalog li:hover .catalog__description,
+.catalog li:focus .catalog__description,
+.catalog li:focus-within .catalog__description {
   height: 100%;
   background-color: #011c40;
 }
 
-.catalog li.focus-visible:focus h3 {
+.catalog li:hover h3,
+.catalog li:focus h3,
+.catalog li:focus-within h3 {
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 
-.catalog li.focus-visible:focus dl {
+.catalog li:hover dl,
+.catalog li:focus dl,
+.catalog li:focus-within dl {
   display: block;
 }
 
-.catalog li.focus-visible:focus a {
+.catalog li:hover a,
+.catalog li:focus a,
+.catalog li:focus-within a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2632,32 +2642,6 @@ button,
 
   .social__link:hover:not(.focus-visible) {
     background-color: rgba(249, 251, 253, 0.2);
-  }
-
-  .catalog li:hover:not(.focus-visible) {
-    -webkit-box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
-    box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
-  }
-
-  .catalog li:hover:not(.focus-visible) .catalog__description {
-    height: 100%;
-    background-color: #011c40;
-  }
-
-  .catalog li:hover:not(.focus-visible) h3 {
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-
-  .catalog li:hover:not(.focus-visible) dl {
-    display: block;
-  }
-
-  .catalog li:hover:not(.focus-visible) a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 
   .catalog__description a:hover:not(.focus-visible) {
