@@ -70,7 +70,9 @@
     display: grid;
     grid-template-columns: 1fr;
 
-    @include hover-focus {
+    &:hover,
+    &:focus,
+    &:focus-within {
       box-shadow: 0 4px 35px rgba($color-tangaroa, 0.15);
 
       .catalog__description {
