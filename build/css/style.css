@@ -1308,7 +1308,7 @@ button,
   row-gap: 50px;
   width: 100%;
   min-height: 650px;
-  background-color: #002877;
+  background-color: #101a56;
   color: #f9fbfd;
   overflow: hidden;
   -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
@@ -1321,6 +1321,7 @@ button,
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  background-color: #101a56;
 }
 
 .intro__image-wrapper {
@@ -1409,6 +1410,7 @@ button,
   position: static;
   width: 70px;
   height: 38px;
+  background-color: transparent;
 }
 
 .header__logo.focus-visible:focus {
@@ -1533,6 +1535,7 @@ button,
   width: 100%;
   -o-object-fit: contain;
   object-fit: contain;
+  background-color: #d5eaff;
 }
 
 .footer {
@@ -1711,6 +1714,7 @@ button,
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  background-color: #d5eaff;
 }
 
 .advantages h2 {
