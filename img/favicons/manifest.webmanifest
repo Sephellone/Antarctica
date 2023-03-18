@@ -1,0 +1,13 @@
+{
+    "name": "Antarctica",
+    "short_name": "",
+    "icons": [
+		{ "src": "img/favicons/16.png", "type": "image/png", "sizes": "16x16" },
+		{ "src": "img/favicons/32.png", "type": "image/png", "sizes": "32x32" },
+		{ "src": "img/favicons/192.png", "type": "image/png", "sizes": "192x192" },
+		{ "src": "img/favicons/512.png", "type": "image/png", "sizes": "512x512" }
+    ],
+    "theme_color": "#011c40",
+    "background_color": "#011c40",
+    "display": "standalone"
+}
