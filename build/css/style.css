@@ -2032,8 +2032,8 @@ button,
   padding-top: 44px;
   background-color: #011c40;
   color: #f9fbfd;
-  -webkit-box-shadow: 0px 4px 45px rgba(1, 28, 64, 0.15);
-  box-shadow: 0px 4px 45px rgba(1, 28, 64, 0.15);
+  -webkit-box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
 }
 
 .booking__container p {
@@ -2247,6 +2247,14 @@ button,
   height: 306px;
 }
 
+.contacts__map-image {
+  display: none;
+}
+
+.contacts__map-image.no-js {
+  display: block;
+}
+
 .contacts__map-image img {
   width: 100%;
   height: 100%;
@@ -2255,15 +2263,16 @@ button,
 }
 
 .contacts__text {
-  -ms-grid-row-align: center;
+  -ms-grid-row-align: start;
   -ms-grid-column-align: end;
-  place-self: center end;
+  place-self: start end;
   max-width: 500px;
+  padding-top: 75px;
 }
 
 .contacts__text p {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   padding: 0;
   font-weight: 500;
   font-size: 18px;
@@ -2279,7 +2288,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -2295,8 +2304,12 @@ button,
   font-style: normal;
 }
 
+.contacts__wrapper a {
+  display: inline-block;
+}
+
 .contacts__wrapper a.focus-visible:focus {
-  text-decoration: underline;
+  background-color: rgba(1, 28, 64, 0.1);
 }
 
 .contacts__wrapper a.focus-visible:active {
@@ -2585,6 +2598,43 @@ button,
   .booking__description p {
     text-align: center;
   }
+
+  .contacts {
+    padding: 100px 0;
+  }
+
+  .contacts__container {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contacts__map {
+    height: 335px;
+  }
+
+  .contacts__text {
+    padding-top: 65px;
+  }
+
+  .contacts__text p {
+    margin-bottom: 28px;
+  }
+
+  .contacts__wrapper {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .contacts__wrapper:first-of-type svg {
+    -webkit-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  .contacts__wrapper address {
+    max-width: 260px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2811,6 +2861,7 @@ button,
 
   .footer {
     padding-top: 35px;
+    padding-bottom: 35px;
   }
 
   .footer__container {
@@ -2959,6 +3010,31 @@ button,
     max-width: 270px;
     font-size: 16px;
     line-height: 22px;
+  }
+
+  .contacts {
+    padding: 59px 0 65px 0;
+  }
+
+  .contacts__container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .contacts__map {
+    height: 316px;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .contacts__text {
+    padding-top: 0;
+  }
+
+  .contacts__wrapper {
+    margin-bottom: 20px;
   }
 }
 
@@ -3134,6 +3210,6 @@ button,
   }
 
   .contacts__wrapper a:hover:not(.focus-visible) {
-    text-decoration: underline;
+    background-color: rgba(1, 28, 64, 0.1);
   }
 }

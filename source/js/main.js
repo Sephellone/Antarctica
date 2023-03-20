@@ -1,6 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {Form} from './modules/form-validate/form';
+// import {Form} from './modules/form-validate/form';
 import {Burger} from './vendor/burger';
+import {initMap} from './modules/map/yandex-map';
+import {PIN_IMAGE, PIN_INFO, DEFAULT_ZOOM, MAP_CENTER} from './modules/map/map-initials';
+import {initJS} from './utils/no-js';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -16,11 +19,30 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    initJS();
     const burger = new Burger();
     burger.init();
-    const form = new Form();
-    window.form = form;
-    form.init();
+
+    initMap({
+      id: 'map',
+      initials: {
+        center: MAP_CENTER,
+        controls: [],
+        zoom: DEFAULT_ZOOM,
+      },
+      placemark: [
+        {
+          hintContent: PIN_INFO,
+        },
+        {
+          iconImageHref: PIN_IMAGE,
+          iconImageSize: [18, 22],
+          iconLayout: 'default#image',
+          iconShadow: false,
+          iconImageOffset: [-9, -22],
+        }
+      ],
+    });
   });
 });
 

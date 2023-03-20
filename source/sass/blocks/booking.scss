@@ -54,7 +54,7 @@
     padding-top: 44px;
     background-color: $color-tangaroa;
     color: $color-alice-blue;
-    box-shadow: 0px 4px 45px rgba($color-tangaroa, 0.15);
+    box-shadow: 0 4px 45px rgba($color-tangaroa, 0.15);
 
     @include vp-1023 {
       place-self: center;
