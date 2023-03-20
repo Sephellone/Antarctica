@@ -198,6 +198,7 @@
         text-decoration: underline;
 
         &::before {
+          background-color: rgba($color-alice-blue, 0.7);
           filter: drop-shadow(0 0 3px $color-alice-blue);
         }
       }
@@ -219,9 +220,22 @@
     background-color: $color-alice-blue;
     border: none;
     box-shadow: none;
+    cursor: pointer;
 
     @include vp-767 {
       margin-top: 15px;
+    }
+
+    @include hover-focus {
+      background-color: rgba($color-alice-blue, 0.7);
+    }
+
+    @include active {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.5;
     }
   }
 }
