@@ -17,6 +17,7 @@ const initMap = (mapData) => {
 
   const scriptElement = document.createElement('script');
   scriptElement.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+  scriptElement.setAttribute('async', '');
   scriptElement.addEventListener('load', () => {
     window.ymaps.ready(() => {
       createMap(mapData);

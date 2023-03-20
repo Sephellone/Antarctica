@@ -112,21 +112,6 @@
     }
   }
 
-  [type="tel"].invalid + label {
-    margin: 0;
-    padding: 0;
-    position: relative;
-
-    &::before {
-      content: "Телефон должен содержать 11 цифр";
-      position: absolute;
-      top: -84px;
-      display: block;
-      color: $color-torch-red;
-      font-size: 10px;
-    }
-  }
-
   [type="checkbox"] {
     & + span {
       position: relative;

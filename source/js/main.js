@@ -1,5 +1,4 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-// import {Form} from './modules/form-validate/form';
 import {Burger} from './vendor/burger';
 import {initMap} from './modules/map/yandex-map';
 import {PIN_IMAGE, PIN_INFO, DEFAULT_ZOOM, MAP_CENTER} from './modules/map/map-initials';
@@ -22,27 +21,28 @@ window.addEventListener('DOMContentLoaded', () => {
     initJS();
     const burger = new Burger();
     burger.init();
-
-    initMap({
-      id: 'map',
-      initials: {
-        center: MAP_CENTER,
-        controls: [],
-        zoom: DEFAULT_ZOOM,
-      },
-      placemark: [
-        {
-          hintContent: PIN_INFO,
+    setTimeout(() => {
+      initMap({
+        id: 'map',
+        initials: {
+          center: MAP_CENTER,
+          controls: [],
+          zoom: DEFAULT_ZOOM,
         },
-        {
-          iconImageHref: PIN_IMAGE,
-          iconImageSize: [18, 22],
-          iconLayout: 'default#image',
-          iconShadow: false,
-          iconImageOffset: [-9, -22],
-        }
-      ],
-    });
+        placemark: [
+          {
+            hintContent: PIN_INFO,
+          },
+          {
+            iconImageHref: PIN_IMAGE,
+            iconImageSize: [18, 22],
+            iconLayout: 'default#image',
+            iconShadow: false,
+            iconImageOffset: [-9, -22],
+          }
+        ],
+      });
+    }, 3000);
   });
 });
 

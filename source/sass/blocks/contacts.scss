@@ -28,6 +28,7 @@
 .contacts__map {
   width: 100%;
   height: 306px;
+  background-color: $color-romance;
 
   @include vp-1023 {
     height: 335px;

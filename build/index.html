@@ -406,10 +406,10 @@
             </div>
             <form action="https://echo.htmlacademy.ru/" method="post">
               <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
-              <input type="text" name="name" id="name" required pattern="[a-zA-Z\u0400-\u04ff\-]{1,}" minlength="1" placeholder="Имя">
+              <input type="text" name="name" id="name" required pattern="[a-zA-Z\u0400-\u04ff\-]{1,}" minlength="1" placeholder="Имя" title="Поле не должно содержать спецсимволы">
               <label for="name" class="visually-hidden">Ваше имя.</label>
 
-              <input type="tel" name="phone" id="phone" placeholder="Телефон" required pattern="[+]?[0-9]{11}" maxlength="12" data-phone>
+              <input type="tel" name="phone" id="phone" placeholder="Телефон" required pattern="[+]?[0-9]{11}" maxlength="12" title="Телефон должен содержать 11 цифр">
               <label for="phone">
                 <span class="visually-hidden">Телефон.</span>
               </label>
@@ -524,6 +524,6 @@
     </div>
 
     <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <script src="js/main.min.js" type="module"></script>
   </body>
 </html>
