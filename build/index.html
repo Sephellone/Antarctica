@@ -43,16 +43,16 @@
             <!-- Навигация, скрывающаяся в мобилке -->
             <ul class="header__nav-list">
               <li class="header__nav-item">
-                <a href="#section-advantages">Преимущества</a>
+                <a href="#section-advantages" data-close-menu>Преимущества</a>
               </li>
               <li class="header__nav-item">
-                <a href="#">Направления</a>
+                <a href="#" data-close-menu>Направления</a>
               </li>
               <li class="header__nav-item">
-                <a href="#section-catalog">Ближайшие круизы</a>
+                <a href="#section-catalog" data-close-menu>Ближайшие круизы</a>
               </li>
               <li class="header__nav-item">
-                <a href="#">Контакты</a>
+                <a href="#section-contacts" data-close-menu>Контакты</a>
               </li>
             </ul>
 
@@ -388,8 +388,82 @@
           </div>
         </section>
 
-        <!-- Комментарий чтобы сделать коммит  -->
-        Еще коммит2323
+        <!-- Секция "Раннее бронирование"  -->
+        <section class="booking">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/booking/booking-bg-mobile.webp 1x, img/booking/booking-bg-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/booking/booking-bg-tablet.webp 1x, img/booking/booking-bg-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/booking/booking-bg-desktop.webp 1x, img/booking/booking-bg-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/booking/booking-bg-mobile.jpg 1x, img/booking/booking-bg-mobile@2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/booking/booking-bg-tablet.jpg 1x, img/booking/booking-bg-tablet@2x.jpg 2x">
+            <img src="img/booking/booking-bg-desktop.jpg" width="1366" height="555" alt="Заснеженные горы Антарктики и айсберги, отражающиеся в воде."
+            srcset="img/booking/booking-bg-desktop@2x.jpg 2x">
+          </picture>
+          <div class="container booking__container">
+            <div class="booking__description">
+              <h2>Раннее бронирование</h2>
+              <p>Забронируйте тур за&nbsp;3&#8209;6&nbsp;месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+            </div>
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
+              <input type="text" name="name" id="name" required pattern="[a-zA-Z\u0400-\u04ff\-]{1,}" minlength="1" placeholder="Имя">
+              <label for="name" class="visually-hidden">Ваше имя.</label>
+
+              <input type="tel" name="phone" id="phone" placeholder="Телефон" required pattern="[+]?[0-9]{11}" maxlength="12" data-phone>
+              <label for="phone">
+                <span class="visually-hidden">Телефон.</span>
+              </label>
+
+              <input type="email" name="email" id="email" required placeholder="Email">
+              <label for="email">
+                <span class="visually-hidden">Ваш Email.</span>
+              </label>
+
+              <label for="agreement">
+                <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required checked>
+                <span>Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
+              </label>
+
+              <button type="submit">Оставить заявку</button>
+
+            </form>
+          </div>
+        </section>
+
+        <!-- Секция "Контакты" -->
+        <section class="contacts" id="section-contacts">
+          <h2 class="visually-hidden">Наши контакты.</h2>
+          <div class="container contacts__container">
+            <div class="contacts__map">
+              <div class="contacts__map-image no-js">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/map/map-mobile.jpg 1x, img/map/map-mobile@2x.jpg 2x">
+                  <source media="(max-width: 1023px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
+                  <img src="img/map/map-desktop.jpg" width="1366" height="555" alt="Адрес: г. Санкт Петербург, ул. Большая Конюшенная, 19/8."
+                  srcset="img/map/map-bg-desktop@2x.jpg 2x">
+                </picture>
+              </div>
+            </div>
+            <div class="contacts__text">
+              <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
+              <div class="contacts__wrapper">
+                <svg width="18px" height="22px">
+                  <use href="img/sprite.svg#icon-map-pin"></use>
+                </svg>
+                <address>г. Санкт Петербург, ул. Большая Конюшенная, 19/8</address>
+              </div>
+              <div class="contacts__wrapper">
+                <svg width="18px" height="18px">
+                  <use href="img/sprite.svg#icon-phone"></use>
+                </svg>
+                <a href="tel:88002000000">8-800-200-00-00</a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <!-- Подвал -->
@@ -412,7 +486,7 @@
                 <a href="#section-catalog">Ближайшие круизы</a>
               </li>
               <li>
-                <a href="#">Контакты</a>
+                <a href="#section-contacts">Контакты</a>
               </li>
             </ul>
           </nav>

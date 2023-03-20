@@ -1,0 +1,284 @@
+.booking {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 50px 0;
+  background-color: $color-pale-cornflower-blue;
+  overflow: hidden;
+
+  @include vp-1023 {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 60px;
+    padding-bottom: 65px;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: $color-pale-cornflower-blue;
+  }
+}
+
+.booking__container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 100px;
+  gap: 30px;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    gap: 51px;
+  }
+
+  @include vp-767 {
+    gap: 34px;
+  }
+
+  form {
+    place-self: center end;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    max-width: 403px;
+    padding: 50px;
+    padding-top: 44px;
+    background-color: $color-tangaroa;
+    color: $color-alice-blue;
+    box-shadow: 0px 4px 45px rgba($color-tangaroa, 0.15);
+
+    @include vp-1023 {
+      place-self: center;
+    }
+
+    @include vp-767 {
+      max-width: none;
+      width: 100%;
+      padding: 40px 30px;
+      padding-top: 35px;
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 27px;
+    padding: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+
+    @include vp-767 {
+      text-align: center;
+      line-height: 25px;
+    }
+  }
+
+  input:not([type="checkbox"]) {
+    display: block;
+    box-sizing: border-box;
+    min-height: 43px;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 10px 16px;
+    font-family: $ff-Montserrat;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: $color-alice-blue;
+    color: $color-tangaroa;
+    border: none;
+
+    &::placeholder {
+      color: rgba($color-tangaroa, 0.7);
+    }
+
+    @include vp-767 {
+      padding: 13px 15px 9px 15px;
+    }
+
+    @include hover-focus {
+      outline: 1px solid $color-quartz;
+      outline-offset: 2px;
+      filter: drop-shadow(0 0 3px $color-alice-blue);
+    }
+  }
+
+  [type="tel"].invalid + label {
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    &::before {
+      content: "Телефон должен содержать 11 цифр";
+      position: absolute;
+      top: -84px;
+      display: block;
+      color: $color-torch-red;
+      font-size: 10px;
+    }
+  }
+
+  [type="checkbox"] {
+    & + span {
+      position: relative;
+      display: block;
+      margin-bottom: 10px;
+      padding: 3px 0;
+      padding-left: 23px;
+      font-size: 10px;
+      line-height: 13px;
+      cursor: pointer;
+
+      @include vp-767 {
+        padding: 0;
+        padding-left: 27px;
+        max-width: 184px;
+      }
+
+      @include hover-focus {
+        text-decoration: underline;
+
+        &::before {
+          filter: drop-shadow(0 0 3px $color-alice-blue);
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 18px;
+        height: 18px;
+        background-color: $color-alice-blue;
+
+        transform: translateY(-55%);
+
+        @include vp-767 {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    &:checked + span {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 4px;
+        display: block;
+        width: 10px;
+        height: 6px;
+        border: 1px solid $color-sapphire;
+        border-right: none;
+        border-top: none;
+
+        transform: translateY(-90%) rotate(-45deg);
+
+        @include vp-767 {
+          left: 5px;
+          top: 45%;
+        }
+      }
+    }
+
+    @include hover-focus {
+      & + span {
+        text-decoration: underline;
+
+        &::before {
+          filter: drop-shadow(0 0 3px $color-alice-blue);
+        }
+      }
+    }
+  }
+
+  button {
+    box-sizing: border-box;
+    margin-top: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px;
+    font-family: $ff-Montserrat;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-tangaroa;
+    background-color: $color-alice-blue;
+    border: none;
+    box-shadow: none;
+
+    @include vp-767 {
+      margin-top: 15px;
+    }
+  }
+}
+
+.booking__description {
+  color: $color-tangaroa;
+  place-self: center start;
+  transform: translateY(-5px);
+
+  @include vp-1023 {
+    place-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(0);
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 6px;
+    padding: 0;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+
+    @include vp-1023 {
+      font-size: 34px;
+      line-height: 51px;
+      text-align: center;
+    }
+
+    @include vp-767 {
+      max-width: 250px;
+      font-size: 24px;
+      line-height: 31px;
+      margin-bottom: 13px;
+    }
+  }
+
+  p {
+    max-width: 360px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+
+    @include vp-1023 {
+      text-align: center;
+    }
+
+    @include vp-767 {
+      max-width: 270px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}

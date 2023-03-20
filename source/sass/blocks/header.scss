@@ -42,9 +42,9 @@
       right: 0;
       z-index: 5;
       display: block;
-      padding-top: 20px;
-      padding-left: 16px;
-      min-width: 285px;
+      padding-top: 10px;
+      padding-left: 15px;
+      min-width: 283px;
       width: 88%;
       height: 100%;
       background-color: $color-alice-blue;
@@ -61,10 +61,12 @@
 
   @include vp-1023 {
     padding-top: 18px;
+    transform: translateX(-2px);
   }
 
   @include vp-767 {
     padding-top: 10px;
+    transform: translateX(0);
   }
 
   img {
@@ -89,10 +91,10 @@
   }
 
   .is-open & {
-    filter: brightness(0.15) saturate(100) hue-rotate(35deg);
+    filter: brightness(0.15) saturate(100) hue-rotate(10deg);
 
     @include hover-focus {
-      filter: brightness(0.15) saturate(100) hue-rotate(35deg) drop-shadow(0 0 2px $color-tangaroa);
+      filter: brightness(0.15) saturate(100) hue-rotate(10deg) drop-shadow(0 0 2px $color-tangaroa);
     }
   }
 }
@@ -117,7 +119,7 @@
       display: block;
       visibility: visible;
       padding-left: 10px;
-      padding-top: 22px;
+      padding-top: 17px;
       pointer-events: all;
       transform: translateX(0);
     }
