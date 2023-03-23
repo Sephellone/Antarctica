@@ -111,18 +111,25 @@
   transition-property: transform;
 
   @include vp-767 {
-    display: block;
-    visibility: hidden;
+    display: none;
     transform: translateX(200px);
     pointer-events: none;
 
     .is-open & {
       display: block;
       visibility: visible;
+      max-height: 100vh;
       padding-left: 10px;
       padding-top: 17px;
       pointer-events: all;
       transform: translateX(0);
+      overflow-y: scroll;
+      scrollbar-width: none;
+
+      /* stylelint-disable-next-line */
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
 }
