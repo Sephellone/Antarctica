@@ -17,6 +17,7 @@
       &::before {
         content: "";
         position: absolute;
+        z-index: 3;
         top: 0;
         left: 0;
         display: block;
@@ -177,10 +178,6 @@
       }
     }
 
-    @include active {
-      opacity: 0.5;
-    }
-
     &:active {
       opacity: 0.5;
     }
@@ -228,10 +225,6 @@
     @include hover-focus {
       background-color: rgba($color-alice-blue, 0.15);
       filter: drop-shadow(0 0 5px $color-alice-blue);
-    }
-
-    @include active {
-      opacity: 0.5;
     }
 
     &:active {

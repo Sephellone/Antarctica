@@ -125,10 +125,6 @@
       background-color: rgba($color-tangaroa, 0.1);
     }
 
-    @include active {
-      opacity: 0.5;
-    }
-
     &:active {
       opacity: 0.5;
     }

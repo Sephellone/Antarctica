@@ -13,7 +13,7 @@
   }
 
   @include vp-767 {
-    min-height: none;
+    min-height: auto;
     padding-top: 58px;
     padding-bottom: 65px;
   }
