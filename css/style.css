@@ -2057,20 +2057,16 @@ button,
   .is-open .header__nav-list {
     display: block;
     visibility: visible;
+    max-width: 100%;
+    width: 100%;
     max-height: 100vh;
-    padding-left: 10px;
-    padding-top: 17px;
+    padding: 17px 15px 20px 10px;
     pointer-events: all;
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
     overflow-y: scroll;
-    scrollbar-width: none;
-    /* stylelint-disable-next-line */
-  }
-
-  .is-open .header__nav-list::-webkit-scrollbar {
-    display: none;
+    scrollbar-width: thin;
   }
 
   .is-open .header__nav-item {
@@ -2281,7 +2277,8 @@ button,
   }
 
   .catalog li {
-    max-width: 270px;
+    max-width: none;
+    width: 100%;
     margin: 0 auto;
   }
 
