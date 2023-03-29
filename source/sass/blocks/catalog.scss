@@ -72,7 +72,8 @@
     background-color: $color-air-force-blue;
 
     @include vp-767 {
-      max-width: 270px;
+      max-width: none;
+      width: 100%;
       margin: 0 auto;
     }
 

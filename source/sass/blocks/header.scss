@@ -118,18 +118,14 @@
     .is-open & {
       display: block;
       visibility: visible;
+      max-width: 100%;
+      width: 100%;
       max-height: 100vh;
-      padding-left: 10px;
-      padding-top: 17px;
+      padding: 17px 15px 20px 10px;
       pointer-events: all;
       transform: translateX(0);
       overflow-y: scroll;
-      scrollbar-width: none;
-
-      /* stylelint-disable-next-line */
-      &::-webkit-scrollbar {
-        display: none;
-      }
+      scrollbar-width: thin;
     }
   }
 }
