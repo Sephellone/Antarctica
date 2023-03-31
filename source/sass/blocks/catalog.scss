@@ -83,8 +83,14 @@
       box-shadow: 0 4px 35px rgba($color-tangaroa, 0.15);
 
       .catalog__description {
+        box-sizing: border-box;
         height: 100%;
         background-color: $color-tangaroa;
+
+        @include vp-767 {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
       }
 
       .catalog__card-wrapper {
@@ -93,6 +99,11 @@
 
         @include vp-1023 {
           transform: translateY(0);
+        }
+
+        @include vp-767 {
+          box-sizing: border-box;
+          height: auto;
         }
       }
 
@@ -107,6 +118,7 @@
 
       a {
         display: flex;
+        align-self: flex-end;
       }
     }
   }
@@ -239,5 +251,9 @@
 
   @include vp-1023 {
     transform: translateY(11px);
+  }
+
+  @include vp-767 {
+
   }
 }

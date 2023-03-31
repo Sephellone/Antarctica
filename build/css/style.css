@@ -1163,6 +1163,8 @@ button,
 .catalog li:hover .catalog__description,
 .catalog li:focus .catalog__description,
 .catalog li:focus-within .catalog__description {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   height: 100%;
   background-color: #011c40;
 }
@@ -1195,6 +1197,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
 }
 
 .catalog__image-wrapper {
@@ -2280,6 +2284,23 @@ button,
     max-width: none;
     width: 100%;
     margin: 0 auto;
+  }
+
+  .catalog li:hover .catalog__description,
+  .catalog li:focus .catalog__description,
+  .catalog li:focus-within .catalog__description {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .catalog li:hover .catalog__card-wrapper,
+  .catalog li:focus .catalog__card-wrapper,
+  .catalog li:focus-within .catalog__card-wrapper {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: auto;
   }
 
   .catalog__description {
